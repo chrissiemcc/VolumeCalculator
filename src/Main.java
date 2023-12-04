@@ -2,7 +2,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    static final double pi = 3.14159265359;
+    static final double pi = Math.PI;
     static Scanner myObj = new Scanner(System.in);
     static boolean correctInput;
 
@@ -18,6 +18,7 @@ public class Main {
                 1) Cube
                 2) Cylinder
                 3) Sphere
+                4) Square Pyramid
                 0) Exit Program""");
 
             try{
@@ -32,12 +33,31 @@ public class Main {
                 case 1 -> cubeVolume(getLength());
                 case 2 -> cylinderVolume(getRadius(), getLength());
                 case 3 -> sphereVolume(getRadius());
+                case 4 -> squarePyramidVolume(getLength(), getHeight());
                 default -> {
                     System.out.println("Please input a number from the menu");
                 }
             }//call methods based on the user input
         }
     }
+
+    private static double getHeight() {
+        double height = 0.0;
+
+        while (!correctInput) {
+            try{
+                System.out.println("What is the height?");
+                correctInput = true;
+                height = myObj.nextDouble();
+            }catch (InputMismatchException ime){
+                correctInput = false;
+                myObj.next();
+                System.out.println("This input is invalid");
+            }
+        }
+
+        return height;
+    }//get user input for the height of the shape
 
     private static double getLength() {
         double length = 0.0;
@@ -86,4 +106,8 @@ public class Main {
     private static void cubeVolume(double length) {
         System.out.println("The volume is: " + length*length*length);
     }//get volume of a cube
+
+    private static void squarePyramidVolume(double length, double height) {
+        System.out.println("The volume is: " + (length*length*height)/3.0);
+    }//get volume of a square pyramid
 }
