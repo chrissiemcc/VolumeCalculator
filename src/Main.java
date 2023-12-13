@@ -115,22 +115,22 @@ public class Main {
     }//get user input for the base width of the shape
 
     private static void sphereVolume(double radius) {
-        System.out.println("The volume is: " + ((4.0/3.0)*pi*(radius*radius*radius)));
+        System.out.println("The volume of the sphere is: " + ((4.0/3.0)*pi*(radius*radius*radius)));
     }//get volume of a sphere
 
     private static void cylinderVolume(double radius, double length) {
-        System.out.println("The volume is: " + (pi*(radius*radius)*length));
+        System.out.println("The volume of the cylinder is: " + (pi*(radius*radius)*length));
     }//get volume of a cylinder
 
     private static void cubeVolume(double length) {
-        System.out.println("The volume is: " + length*length*length);
+        System.out.println("The volume of the cube is: " + length*length*length);
     }//get volume of a cube
 
     private static void squarePyramidVolume(double length, double height) {
-        System.out.println("The volume is: " + (length*length*height)/3.0);
+        System.out.println("The volume of the square pyramid is: " + (length*length*height)/3.0);
     }//get volume of a square pyramid
 
     private static void equilateralTriangularPrism(double length, double baseWidth) {
-        System.out.println("The volume is: " + ((baseWidth*baseWidth)/2)*length);
+        System.out.println("The volume of the equilateral triangular prism is: " + ((baseWidth*baseWidth)/2)*length);
     }
 }
