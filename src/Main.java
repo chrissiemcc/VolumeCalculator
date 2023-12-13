@@ -34,10 +34,11 @@ public class Main {
                 case 2 -> cylinderVolume(getRadius(), getLength());
                 case 3 -> sphereVolume(getRadius());
                 case 4 -> squarePyramidVolume(getLength(), getHeight());
+                case 5 -> equilateralTriangularPrism(getLength(), getBaseWidth());
                 default -> {
                     System.out.println("Please input a number from the menu");
                 }
-            }//call methods based on the user input
+            }//call methods based on the user input selection
         }
     }
 
@@ -95,6 +96,24 @@ public class Main {
         return radius;
     }//get user input for the radius of the shape
 
+    private static double getBaseWidth() {
+        double baseWidth = 0.0;
+
+        while (!correctInput) {
+            try{
+                System.out.println("What is the base width?");
+                correctInput = true;
+                baseWidth = myObj.nextDouble();
+            }catch (InputMismatchException ime){
+                correctInput = false;
+                myObj.next();
+                System.out.println("This input is invalid");
+            }
+        }
+
+        return baseWidth;
+    }//get user input for the base width of the shape
+
     private static void sphereVolume(double radius) {
         System.out.println("The volume is: " + ((4.0/3.0)*pi*(radius*radius*radius)));
     }//get volume of a sphere
@@ -110,4 +129,8 @@ public class Main {
     private static void squarePyramidVolume(double length, double height) {
         System.out.println("The volume is: " + (length*length*height)/3.0);
     }//get volume of a square pyramid
+
+    private static void equilateralTriangularPrism(double length, double baseWidth) {
+        System.out.println("The volume is: " + ((baseWidth*baseWidth)/2)*length);
+    }
 }
