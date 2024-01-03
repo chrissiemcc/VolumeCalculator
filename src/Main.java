@@ -19,6 +19,8 @@ public class Main {
                 2) Cylinder
                 3) Sphere
                 4) Square Pyramid
+                5) Equilateral Triangular Prism
+                6) Cuboid
                 0) Exit Program""");
 
             try{
@@ -34,7 +36,8 @@ public class Main {
                 case 2 -> cylinderVolume(getRadius(), getLength());
                 case 3 -> sphereVolume(getRadius());
                 case 4 -> squarePyramidVolume(getLength(), getHeight());
-                case 5 -> equilateralTriangularPrism(getLength(), getBaseWidth());
+                case 5 -> equilateralTriangularPrismVolume(getLength(), getBaseWidth());
+                case 6 -> cuboidVolume(getLength(), getHeight(), getWidth());
                 default -> {
                     System.out.println("Please input a number from the menu");
                 }
@@ -114,6 +117,24 @@ public class Main {
         return baseWidth;
     }//get user input for the base width of the shape
 
+    private static double getWidth() {
+        double width = 0.0;
+
+        while (!correctInput) {
+            try{
+                System.out.println("What is the width?");
+                correctInput = true;
+                width = myObj.nextDouble();
+            }catch (InputMismatchException ime){
+                correctInput = false;
+                myObj.next();
+                System.out.println("This input is invalid");
+            }
+        }
+
+        return width;
+    }//get user input for the width of the shape
+
     private static void sphereVolume(double radius) {
         System.out.println("The volume of the sphere is: " + ((4.0/3.0)*pi*(radius*radius*radius)));
     }//get volume of a sphere
@@ -130,7 +151,11 @@ public class Main {
         System.out.println("The volume of the square pyramid is: " + (length*length*height)/3.0);
     }//get volume of a square pyramid
 
-    private static void equilateralTriangularPrism(double length, double baseWidth) {
+    private static void equilateralTriangularPrismVolume(double length, double baseWidth) {
         System.out.println("The volume of the equilateral triangular prism is: " + ((baseWidth*baseWidth)/2)*length);
-    }
+    }//get volume of an equilateral triangular prism
+
+    private static void cuboidVolume(double length, double height, double width) {
+        System.out.println("The volume of the cuboid is: " + (length*height*width));
+    }//get volume of a cuboid
 }
