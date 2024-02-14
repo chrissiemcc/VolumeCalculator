@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -8,7 +7,7 @@ public class Main {
     static boolean correctInput;
 
     public static void main(String[] args) {
-        runGui();
+        new MainFrame();
 
         int input = -1;
 
@@ -161,12 +160,4 @@ public class Main {
     private static void cuboidVolume(double length, double height, double width) {
         System.out.println("The volume of the cuboid is: " + (length*height*width));
     }//get volume of a cuboid
-
-    private static void runGui() {
-        JFrame frame = new JFrame("Volume Calculator");
-
-        frame.setSize(600, 500);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-    }
 }
