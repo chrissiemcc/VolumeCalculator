@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
         toolbar.setStringListener(new StringListener() {
             @Override
             public void textEmitted(String text) {
-                textPanel.appendText(text);
+                if(text.equals("Cube")) textPanel.setCubePanel();
             }
         });
 
