@@ -17,6 +17,7 @@ public class MainFrame extends JFrame {
             @Override
             public void textEmitted(String text) {
                 if(text.equals("Cube")) textPanel.setCubePanel();
+                if(text.equals("Cuboid")) textPanel.setCuboidPanel();
             }
         });
 
