@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class MainFrame extends JFrame {
     private Toolbar toolbar;
-    private TextPanel textPanel;
+    private DataPanel dataPanel;
 
     public MainFrame() {
         super("Volume Calculator");
@@ -11,21 +11,21 @@ public class MainFrame extends JFrame {
         setLayout(new BorderLayout());
 
         toolbar = new Toolbar();
-        textPanel = new TextPanel();
+        dataPanel = new DataPanel();
 
         toolbar.setStringListener(new StringListener() {
             @Override
             public void textEmitted(String text) {
-                if(text.equals("Cube")) textPanel.setCubePanel();
-                if(text.equals("Cylinder")) textPanel.setCylinderPanel();
-                if(text.equals("Sphere")) textPanel.setSpherePanel();
-                if(text.equals("Equilateral Triangular Prism")) textPanel.setEquilateralTriangularPrismPanel();
-                if(text.equals("Cuboid")) textPanel.setCuboidPanel();
+                if(text.equals("Cube")) dataPanel.setCubePanel();
+                if(text.equals("Cylinder")) dataPanel.setCylinderPanel();
+                if(text.equals("Sphere")) dataPanel.setSpherePanel();
+                if(text.equals("Equilateral Triangular Prism")) dataPanel.setEquilateralTriangularPrismPanel();
+                if(text.equals("Cuboid")) dataPanel.setCuboidPanel();
             }
         });
 
         add(toolbar, BorderLayout.NORTH);
-        add(textPanel, BorderLayout.CENTER);
+        add(dataPanel, BorderLayout.CENTER);
 
         setSize(700, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

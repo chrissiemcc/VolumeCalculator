@@ -2,7 +2,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
-public class TextPanel extends JPanel {
+public class DataPanel extends JPanel {
     private final JTextField txtLength = new JTextField(10);
     private final JTextField txtHeight = new JTextField(10);
     private final JTextField txtWidth = new JTextField(10);
@@ -15,7 +15,7 @@ public class TextPanel extends JPanel {
     private final JLabel lblBaseWidth = new JLabel("Base Width:");
     GridBagConstraints gc = new GridBagConstraints();
 
-    public TextPanel() {
+    public DataPanel() {
         Border innerBorder = BorderFactory.createTitledBorder("Volume Calculator");
         Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
