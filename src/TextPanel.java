@@ -7,10 +7,12 @@ public class TextPanel extends JPanel {
     private final JTextField txtHeight = new JTextField(10);
     private final JTextField txtWidth = new JTextField(10);
     private final JTextField txtRadius = new JTextField(10);
+    private final JTextField txtBaseWidth = new JTextField(10);
     private final JLabel lblLength = new JLabel("Length:");
     private final JLabel lblHeight = new JLabel("Height:");
     private final JLabel lblWidth = new JLabel("Width:");
     private final JLabel lblRadius = new JLabel("Radius:");
+    private final JLabel lblBaseWidth = new JLabel("Base Width:");
     GridBagConstraints gc = new GridBagConstraints();
 
     public TextPanel() {
@@ -51,6 +53,30 @@ public class TextPanel extends JPanel {
 
         gc.gridx = 1;
         add(txtRadius, gc);
+
+        refreshPanel();
+    }
+
+    public void setEquilateralTriangularPrismPanel() {
+        clearPanel();
+
+        gc.weightx = 1;
+        gc.weighty = 1;
+        gc.fill = GridBagConstraints.NONE;
+
+        gc.gridx = 0;
+        gc.gridy = 0;
+        add(lblLength, gc);
+
+        gc.gridx = 1;
+        add(txtLength, gc);
+
+        gc.gridx = 0;
+        gc.gridy = 1;
+        add(lblBaseWidth, gc);
+
+        gc.gridx = 1;
+        add(txtBaseWidth, gc);
 
         refreshPanel();
     }

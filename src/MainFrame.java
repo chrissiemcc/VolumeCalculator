@@ -18,6 +18,7 @@ public class MainFrame extends JFrame {
             public void textEmitted(String text) {
                 if(text.equals("Cube")) textPanel.setCubePanel();
                 if(text.equals("Sphere")) textPanel.setSpherePanel();
+                if(text.equals("Equilateral Triangular Prism")) textPanel.setEquilateralTriangularPrismPanel();
                 if(text.equals("Cuboid")) textPanel.setCuboidPanel();
             }
         });
