@@ -40,6 +40,30 @@ public class TextPanel extends JPanel {
         refreshPanel();
     }
 
+    public void setCylinderPanel() {
+        clearPanel();
+
+        gc.weightx = 1;
+        gc.weighty = 1;
+        gc.fill = GridBagConstraints.NONE;
+
+        gc.gridx = 0;
+        gc.gridy = 0;
+        add(lblRadius, gc);
+
+        gc.gridx = 1;
+        add(txtRadius, gc);
+
+        gc.gridx = 0;
+        gc.gridy = 1;
+        add(lblLength, gc);
+
+        gc.gridx = 1;
+        add(txtLength, gc);
+
+        refreshPanel();
+    }
+
     public void setSpherePanel() {
         clearPanel();
 

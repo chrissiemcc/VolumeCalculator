@@ -17,6 +17,7 @@ public class MainFrame extends JFrame {
             @Override
             public void textEmitted(String text) {
                 if(text.equals("Cube")) textPanel.setCubePanel();
+                if(text.equals("Cylinder")) textPanel.setCylinderPanel();
                 if(text.equals("Sphere")) textPanel.setSpherePanel();
                 if(text.equals("Equilateral Triangular Prism")) textPanel.setEquilateralTriangularPrismPanel();
                 if(text.equals("Cuboid")) textPanel.setCuboidPanel();
