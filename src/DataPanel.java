@@ -81,6 +81,30 @@ public class DataPanel extends JPanel {
         refreshPanel();
     }
 
+    public void setSquarePyramidPanel() {
+        clearPanel();
+
+        gc.weightx = 1;
+        gc.weighty = 1;
+        gc.fill = GridBagConstraints.NONE;
+
+        gc.gridx = 0;
+        gc.gridy = 0;
+        add(lblLength, gc);
+
+        gc.gridx = 1;
+        add(txtLength, gc);
+
+        gc.gridx = 0;
+        gc.gridy = 1;
+        add(lblHeight, gc);
+
+        gc.gridx = 1;
+        add(txtHeight, gc);
+
+        refreshPanel();
+    }
+
     public void setEquilateralTriangularPrismPanel() {
         clearPanel();
 

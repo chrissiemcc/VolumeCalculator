@@ -19,6 +19,7 @@ public class MainFrame extends JFrame {
                 if(text.equals("Cube")) dataPanel.setCubePanel();
                 if(text.equals("Cylinder")) dataPanel.setCylinderPanel();
                 if(text.equals("Sphere")) dataPanel.setSpherePanel();
+                if(text.equals("Square Pyramid")) dataPanel.setSquarePyramidPanel();
                 if(text.equals("Equilateral Triangular Prism")) dataPanel.setEquilateralTriangularPrismPanel();
                 if(text.equals("Cuboid")) dataPanel.setCuboidPanel();
             }
