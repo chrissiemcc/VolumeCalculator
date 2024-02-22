@@ -4,6 +4,7 @@ import java.awt.*;
 public class MainFrame extends JFrame {
     private Toolbar toolbar;
     private DataPanel dataPanel;
+    private ResultPanel resultPanel;
 
     public MainFrame() {
         super("Volume Calculator");
@@ -12,6 +13,7 @@ public class MainFrame extends JFrame {
 
         toolbar = new Toolbar();
         dataPanel = new DataPanel();
+        resultPanel = new ResultPanel();
 
         toolbar.setStringListener(new StringListener() {
             @Override
@@ -27,6 +29,7 @@ public class MainFrame extends JFrame {
 
         add(toolbar, BorderLayout.NORTH);
         add(dataPanel, BorderLayout.CENTER);
+        add(resultPanel, BorderLayout.SOUTH);
 
         setSize(700, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
