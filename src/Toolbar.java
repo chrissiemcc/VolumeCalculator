@@ -4,16 +4,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Toolbar extends JPanel implements ActionListener {
-    private JButton btnCube, btnCylinder, btnSphere, btnSquarePyramid, btnEquilateralTriangularPrism, btnCuboid;
     private StringListener textListener;
 
     public Toolbar() {
-        btnCube = new JButton("Cube");
-        btnCylinder = new JButton("Cylinder");
-        btnSphere = new JButton("Sphere");
-        btnSquarePyramid = new JButton("Square Pyramid");
-        btnEquilateralTriangularPrism = new JButton("Equilateral Triangular Prism");
-        btnCuboid = new JButton("Cuboid");
+        JButton btnCube = new JButton("Cube");
+        JButton btnCylinder = new JButton("Cylinder");
+        JButton btnSphere = new JButton("Sphere");
+        JButton btnSquarePyramid = new JButton("Square Pyramid");
+        JButton btnEquilateralTriangularPrism = new JButton("Equilateral Triangular Prism");
+        JButton btnCuboid = new JButton("Cuboid");
 
         setLayout(new FlowLayout());
 
