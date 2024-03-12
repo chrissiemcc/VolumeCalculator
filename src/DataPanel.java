@@ -161,9 +161,13 @@ public class DataPanel extends JPanel {
     }
 
     public void clearPanel() {
-
         this.removeAll();
-    }
+        txtBaseWidth.setText("");
+        txtHeight.setText("");
+        txtLength.setText("");
+        txtRadius.setText("");
+        txtWidth.setText("");
+    } // Each time a button is pressed, clear the panel and the data from each text field
 
     public void refreshPanel() {
         this.revalidate();
