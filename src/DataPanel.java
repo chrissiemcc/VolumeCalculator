@@ -16,11 +16,11 @@ public class DataPanel extends JPanel {
     GridBagConstraints gc = new GridBagConstraints();
 
     public DataPanel() {
+        setLayout(new GridBagLayout());
+
         Border innerBorder = BorderFactory.createTitledBorder("Volume Calculator");
         Border outerBorder = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
-
-        setLayout(new GridBagLayout());
     }
 
     public void setCubePanel() {

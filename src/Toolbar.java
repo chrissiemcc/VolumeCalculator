@@ -7,14 +7,14 @@ public class Toolbar extends JPanel implements ActionListener {
     private StringListener textListener;
 
     public Toolbar() {
+        setLayout(new FlowLayout());
+
         JButton btnCube = new JButton("Cube");
         JButton btnCylinder = new JButton("Cylinder");
         JButton btnSphere = new JButton("Sphere");
         JButton btnSquarePyramid = new JButton("Square Pyramid");
         JButton btnEquilateralTriangularPrism = new JButton("Equilateral Triangular Prism");
         JButton btnCuboid = new JButton("Cuboid");
-
-        setLayout(new FlowLayout());
 
         add(btnCube);
         add(btnCylinder);
